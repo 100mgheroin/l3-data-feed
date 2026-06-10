@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-PROJECT_DIR ="/opt/l3-data-feed"
+PROJECT_DIR="/opt/l3-data-feed"
 
 echo "Installing dependencies..."
 
-cd "PROJECT_DIR"
+cd "$PROJECT_DIR"
 
 uv sync
 
@@ -18,7 +18,7 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=$PROJECT_DIR
-ExecStart=$PROJECT_DIR/.venv/bin/python -m l3-data-feed
+ExecStart=$PROJECT_DIR/.venv/bin/python -m __main__
 Restart=always
 
 [Install]
