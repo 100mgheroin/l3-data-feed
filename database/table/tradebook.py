@@ -1,6 +1,7 @@
-from sqlalchemy import BigInteger, Float, Boolean
+from sqlalchemy import BigInteger, Boolean, Float
 from sqlalchemy.orm import Mapped, mapped_column
-from data.database.base import Base
+
+from database.base import Base
 
 
 class TradeBook(Base):
